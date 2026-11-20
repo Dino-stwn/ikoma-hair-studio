@@ -9,13 +9,11 @@ import AlertMessage from '@/components/common/AlertMessage.vue'
 const router = useRouter()
 const auth   = useAuthStore()
 
-const username  = ref('')
-const password  = ref('')
-const loading   = ref(false)
-const alertMsg  = ref('')
-
-// Error per-field untuk validasi kosong
-const errors = ref({ username: '', password: '' })
+const username = ref('')
+const password = ref('')
+const loading  = ref(false)
+const alertMsg = ref('')
+const errors   = ref({ username: '', password: '' })
 
 function validate() {
   errors.value.username = username.value.trim() ? '' : 'Username wajib diisi.'
@@ -26,35 +24,27 @@ function validate() {
 async function handleSubmit() {
   alertMsg.value = ''
   if (!validate()) return
-
   loading.value = true
   const result = auth.login(username.value.trim(), password.value)
   loading.value = false
-
   if (!result.ok) {
     alertMsg.value = result.message
     password.value = ''
     return
   }
-
   router.push({ name: 'Dashboard' })
 }
 </script>
 
 <template>
-  <div class="login-form-card card">
-    <!-- Brand -->
+  <div class="login-card">
     <div class="login-brand">
       <p class="brand-logo">I KOMA</p>
-      <p class="brand-tagline">Hair Studio &mdash; Cabang 2</p>
+      <p class="brand-name">Hair Studio</p>
+      <p class="brand-tagline">Cabang ke-2 &mdash; Sistem Manajemen</p>
     </div>
 
-    <!-- Alert error -->
-    <AlertMessage
-      type="error"
-      :message="alertMsg"
-      @close="alertMsg = ''"
-    />
+    <AlertMessage type="error" :message="alertMsg" @close="alertMsg = ''" />
 
     <form novalidate @submit.prevent="handleSubmit">
       <BaseInput
@@ -74,19 +64,11 @@ async function handleSubmit() {
         :error="errors.password"
         class="mb-field"
       />
-
-      <BaseButton
-        type="submit"
-        label="Masuk"
-        variant="primary"
-        :disabled="loading"
-        class="btn-full"
-      >
+      <BaseButton type="submit" label="Masuk" variant="primary" :disabled="loading" class="btn-full">
         {{ loading ? 'Memproses…' : 'Masuk' }}
       </BaseButton>
     </form>
 
-    <!-- Petunjuk akun demo -->
     <details class="demo-info">
       <summary>Akun demo</summary>
       <ul>
@@ -99,69 +81,24 @@ async function handleSubmit() {
 </template>
 
 <style scoped>
-.login-form-card {
-  width: 100%;
-  max-width: 420px;
-  padding: 40px;
+.login-card {
+  width: 100%; max-width: 420px;
+  background: var(--color-surface); border-radius: var(--radius-modal);
+  padding: 44px 40px; box-shadow: var(--shadow-lg);
 }
-
-/* Brand */
-.login-brand {
-  text-align: center;
-  margin-bottom: 28px;
-}
-
+.login-brand { text-align: center; margin-bottom: 30px; }
 .brand-logo {
-  font-family: var(--font-heading);
-  font-size: 38px;
-  font-weight: 700;
-  color: var(--color-primary);
-  letter-spacing: 5px;
-  line-height: 1;
+  font-family: var(--font-heading); font-size: 36px;
+  font-weight: 700; color: var(--color-primary); letter-spacing: 6px; line-height: 1;
 }
-
-.brand-tagline {
-  font-size: var(--text-label);
-  color: #9CA3AF;
-  margin-top: 6px;
-}
-
-/* Form spacing */
-.mb-field { margin-bottom: 16px; }
-
-.btn-full {
-  width: 100%;
-  justify-content: center;
-  margin-top: 4px;
-}
-
-/* Demo info */
-.demo-info {
-  margin-top: 24px;
-  font-size: var(--text-label);
-  color: #9CA3AF;
-  border-top: 1px solid #F3F4F6;
-  padding-top: 16px;
-}
-
-.demo-info summary {
-  cursor: pointer;
-  font-weight: 500;
-  margin-bottom: 8px;
-  color: #6B7280;
-}
-
-.demo-info ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.demo-info code {
-  background: #F3F4F6;
-  padding: 1px 5px;
-  border-radius: 3px;
-  font-size: 11px;
-}
+.brand-name { font-family: var(--font-heading); font-size: 15px; font-weight: 600; color: var(--color-secondary); margin-top: 4px; letter-spacing: 1px; }
+.brand-tagline { font-size: var(--text-label); color: #9CA3AF; margin-top: 6px; }
+.mb-field { margin-bottom: 18px; }
+.btn-full { width: 100%; justify-content: center; margin-top: 6px; }
+.demo-info { margin-top: 24px; font-size: var(--text-label); color: #9CA3AF; border-top: 1px solid #F3F4F6; padding-top: 16px; }
+.demo-info summary { cursor: pointer; font-weight: 500; margin-bottom: 8px; color: #6B7280; user-select: none; }
+.demo-info ul { list-style: none; display: flex; flex-direction: column; gap: 5px; margin-top: 8px; }
+.demo-info li { font-size: 11px; }
+.demo-info code { background: #F3F4F6; padding: 1px 6px; border-radius: 4px; font-size: 11px; font-family: monospace; color: var(--color-secondary); }
+@media (max-width: 480px) { .login-card { padding: 32px 24px; } }
 </style>

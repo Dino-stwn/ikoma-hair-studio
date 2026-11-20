@@ -127,12 +127,15 @@ const perKaryawan = computed(() => {
 
 .summary-hero {
   display: flex; align-items: stretch;
-  background: var(--color-secondary); border-radius: 10px; overflow: hidden;
+  background: var(--color-secondary);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
 }
-.hero-item    { flex: 1; padding: 20px 24px; display: flex; flex-direction: column; gap: 6px; }
-.hero-label   { font-size: 11px; color: #9CA3AF; text-transform: uppercase; letter-spacing: 0.5px; }
-.hero-value   { font-family: var(--font-heading); font-size: 24px; font-weight: 700; color: #fff; }
-.hero-divider { width: 1px; background: rgba(255,255,255,0.15); margin: 16px 0; }
+.hero-item    { flex: 1; padding: 22px 26px; display: flex; flex-direction: column; gap: 6px; }
+.hero-label   { font-size: 11px; color: #9CA3AF; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
+.hero-value   { font-family: var(--font-heading); font-size: 26px; font-weight: 700; color: #fff; line-height: 1.1; }
+.hero-divider { width: 1px; background: rgba(255,255,255,0.12); margin: 16px 0; }
 
 .detail-grid {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;

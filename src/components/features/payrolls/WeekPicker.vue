@@ -56,30 +56,37 @@ watch([weekStart, weekEnd], ([s, e]) => {
 </template>
 
 <style scoped>
-.week-picker { margin-bottom: 16px; }
+.week-picker { margin-bottom: 20px; }
 
 .picker-row {
   display: flex;
   align-items: flex-end;
-  gap: 24px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
-.date-input { min-width: 180px; }
+.date-input { min-width: 200px; }
 
-.range-display { flex: 1; min-width: 220px; }
+.range-display {
+  flex: 1;
+  min-width: 220px;
+  background: var(--color-primary-tint);
+  border: 1px solid rgba(201, 162, 39, 0.2);
+  border-radius: var(--radius-btn);
+  padding: 10px 16px;
+}
 
 .range-val {
   font-family: var(--font-heading);
   font-size: var(--text-subheading);
   font-weight: 600;
   color: var(--color-secondary);
-  margin-top: 4px;
+  margin-top: 2px;
 }
 
 .picker-hint {
   font-size: var(--text-label);
   color: #9CA3AF;
-  margin-top: 10px;
+  margin-top: 12px;
 }
 </style>

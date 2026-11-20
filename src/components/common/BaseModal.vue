@@ -36,31 +36,32 @@ defineEmits(['close'])
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(17, 24, 39, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 999;
   padding: 16px;
+  backdrop-filter: blur(2px);
 }
 
 .modal-box {
   background: var(--color-surface);
-  border-radius: 10px;
+  border-radius: var(--radius-modal);
   width: 100%;
-  max-width: 520px;
+  max-width: 540px;
   max-height: 90vh;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  box-shadow: var(--shadow-lg);
 }
 
 .modal-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 20px;
-  border-bottom: 1px solid #E5E7EB;
+  padding: 20px 24px;
+  border-bottom: 1px solid #F3F4F6;
   flex-shrink: 0;
 }
 
@@ -72,39 +73,59 @@ defineEmits(['close'])
 }
 
 .modal-close {
-  background: none;
+  background: #F3F4F6;
   border: none;
-  font-size: 18px;
+  font-size: 13px;
   cursor: pointer;
-  color: #9CA3AF;
+  color: #6B7280;
   line-height: 1;
-  padding: 2px 6px;
-  border-radius: 4px;
-  transition: color 0.15s;
+  padding: 7px 9px;
+  border-radius: 7px;
+  transition: background var(--transition-fast), color var(--transition-fast);
 }
 
-.modal-close:hover { color: var(--color-text); }
+.modal-close:hover {
+  background: #E5E7EB;
+  color: var(--color-text);
+}
 
 .modal-body {
-  padding: 20px;
+  padding: 24px;
   overflow-y: auto;
   flex: 1;
 }
 
 .modal-footer {
-  padding: 14px 20px;
-  border-top: 1px solid #E5E7EB;
+  padding: 16px 24px;
+  border-top: 1px solid #F3F4F6;
   display: flex;
   justify-content: flex-end;
   gap: 10px;
   flex-shrink: 0;
 }
 
-/* Transisi */
-.modal-enter-active, .modal-leave-active { transition: opacity 0.2s; }
-.modal-enter-from, .modal-leave-to { opacity: 0; }
-.modal-enter-active .modal-box,
-.modal-leave-active .modal-box { transition: transform 0.2s; }
-.modal-enter-from .modal-box,
-.modal-leave-to .modal-box { transform: scale(0.95) translateY(-10px); }
+/* Transisi masuk lembut */
+.modal-enter-active {
+  transition: opacity var(--transition-base);
+}
+.modal-leave-active {
+  transition: opacity var(--transition-fast);
+}
+.modal-enter-from,
+.modal-leave-to {
+  opacity: 0;
+}
+.modal-enter-active .modal-box {
+  transition: transform var(--transition-base), opacity var(--transition-base);
+}
+.modal-leave-active .modal-box {
+  transition: transform var(--transition-fast);
+}
+.modal-enter-from .modal-box {
+  transform: scale(0.96) translateY(-12px);
+  opacity: 0;
+}
+.modal-leave-to .modal-box {
+  transform: scale(0.97) translateY(-6px);
+}
 </style>

@@ -41,14 +41,20 @@ const max = computed(() => Math.max(...props.bars.map(b => b.value), 1))
 </template>
 
 <style scoped>
-.chart-wrap { background: #fff; border: 1px solid var(--color-border, #E5E7EB); border-radius: 8px; padding: 18px; }
-.chart-title { font-size: 14px; font-weight: 600; margin-bottom: 14px; color: var(--color-secondary); }
-.chart-empty { color: #9CA3AF; font-size: 13px; }
-.chart-bars { display: flex; flex-direction: column; gap: 10px; }
+.chart-wrap {
+  background: var(--color-surface);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: var(--radius-card);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+}
+.chart-title { font-family: var(--font-heading); font-size: 14px; font-weight: 600; margin-bottom: 16px; color: var(--color-secondary); }
+.chart-empty { color: #9CA3AF; font-size: 13px; padding: 12px 0; }
+.chart-bars { display: flex; flex-direction: column; gap: 12px; }
 .bar-item { display: flex; flex-direction: column; gap: 4px; }
-.bar-track { height: 20px; background: #F3F4F6; border-radius: 4px; overflow: hidden; }
-.bar-fill { height: 100%; border-radius: 4px; transition: width 0.4s ease; min-width: 2px; }
-.bar-meta { display: flex; justify-content: space-between; }
-.bar-label { font-size: 12px; color: #374151; }
-.bar-value { font-size: 12px; font-weight: 600; color: var(--color-secondary); }
+.bar-track { height: 20px; background: #F3F4F6; border-radius: 6px; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 6px; transition: width 0.4s ease; min-width: 2px; }
+.bar-meta { display: flex; justify-content: space-between; font-size: 12px; }
+.bar-label { color: #374151; font-weight: 500; }
+.bar-value { font-weight: 600; color: var(--color-secondary); }
 </style>

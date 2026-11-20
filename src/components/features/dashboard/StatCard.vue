@@ -1,23 +1,59 @@
 <script setup>
 defineProps({
-  title: { type: String, default: '' },
-  value: { type: [String, Number], default: '' },
-  hint:  { type: String, default: '' }
+  title:   { type: String, default: '' },
+  value:   { type: [String, Number], default: '' },
+  hint:    { type: String, default: '' },
+  icon:    { type: String, default: '📊' },
+  variant: { type: String, default: 'default' } // default | success | warning | danger
 })
 </script>
 
 <template>
   <div class="stat-card card">
-    <p class="stat-card__title label">{{ title }}</p>
+    <div class="stat-card__header">
+      <span class="stat-card__icon-wrap" :class="`icon-wrap--${variant}`">
+        {{ icon }}
+      </span>
+    </div>
+    <p class="stat-card__title">{{ title }}</p>
     <p class="stat-card__value">{{ value }}</p>
     <p v-if="hint" class="stat-card__hint">{{ hint }}</p>
   </div>
 </template>
 
 <style scoped>
-.stat-card { display: flex; flex-direction: column; gap: 6px; }
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+.stat-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.stat-card__header { margin-bottom: 2px; }
+
+.stat-card__icon-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: var(--color-primary-tint);
+}
+
+.icon-wrap--success { background-color: var(--color-success-tint); }
+.icon-wrap--warning { background-color: var(--color-warning-tint); }
+.icon-wrap--danger  { background-color: var(--color-danger-tint); }
 
 .stat-card__title {
+  font-size: var(--text-label);
+  font-weight: 600;
   color: #6B7280;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -25,7 +61,7 @@ defineProps({
 
 .stat-card__value {
   font-family: var(--font-heading);
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 700;
   color: var(--color-secondary);
   line-height: 1.1;

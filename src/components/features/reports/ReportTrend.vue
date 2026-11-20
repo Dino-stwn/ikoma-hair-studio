@@ -70,28 +70,35 @@ const bars = computed(() => {
 </template>
 
 <style scoped>
-.trend-wrap { overflow-x: auto; }
+.trend-wrap {
+  overflow-x: auto;
+  background: var(--color-surface);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: var(--radius-card);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+}
 .empty { color: #9CA3AF; font-size: 13px; padding: 20px 0; }
 .trend-bars {
   display: flex;
   align-items: flex-end;
-  gap: 10px;
+  gap: 12px;
   min-height: 160px;
   padding: 8px 0 0;
 }
 .trend-bar-item {
-  display: flex; flex-direction: column; align-items: center; gap: 4px;
-  flex: 1; min-width: 48px;
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  flex: 1; min-width: 52px;
 }
 .bar-col { flex: 1; display: flex; align-items: flex-end; height: 120px; width: 100%; }
-.bar-track { width: 100%; height: 100%; display: flex; align-items: flex-end; }
+.bar-track { width: 100%; height: 100%; display: flex; align-items: flex-end; background: #F3F4F6; border-radius: 6px 6px 0 0; overflow: hidden; }
 .bar-fill {
   width: 100%;
   background: var(--color-primary);
-  border-radius: 4px 4px 0 0;
+  border-radius: 6px 6px 0 0;
   min-height: 4px;
-  transition: height 0.4s ease;
+  transition: height 0.3s ease;
 }
-.bar-label { font-size: 11px; color: #6B7280; text-align: center; white-space: nowrap; }
+.bar-label { font-size: 11px; color: #6B7280; text-align: center; white-space: nowrap; font-weight: 500; }
 .bar-val { font-size: 11px; font-weight: 600; color: var(--color-secondary); text-align: center; white-space: nowrap; }
 </style>

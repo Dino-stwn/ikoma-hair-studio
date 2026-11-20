@@ -57,7 +57,7 @@ defineExpose({ reset })
 </template>
 
 <style scoped>
-.deduction-row   { display: flex; align-items: flex-end; gap: 16px; flex-wrap: wrap; margin-top: 16px; }
-.deduction-input { flex: 1; min-width: 200px; }
-.save-btn        { flex-shrink: 0; height: 38px; }
+.deduction-row   { display: flex; align-items: flex-end; gap: 16px; flex-wrap: wrap; margin-top: 18px; padding-top: 16px; border-top: 1px solid #F3F4F6; }
+.deduction-input { flex: 1; min-width: 220px; }
+.save-btn        { flex-shrink: 0; margin-bottom: 2px; }
 </style>

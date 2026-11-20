@@ -15,7 +15,8 @@ defineEmits(['remove'])
     <h2 class="cart-title">Keranjang</h2>
 
     <div v-if="items.length === 0" class="cart-empty">
-      Belum ada item. Tambahkan dari panel kiri.
+      <span class="cart-empty__icon">🛒</span>
+      <span>Belum ada item. Tambahkan dari panel kiri.</span>
     </div>
 
     <div v-else class="cart-items">
@@ -49,29 +50,40 @@ defineEmits(['remove'])
         </div>
 
         <!-- Tombol hapus -->
-        <BaseButton label="✕" variant="danger" class="btn-remove" @click="$emit('remove', idx)" />
+        <button class="btn-remove" aria-label="Hapus item" @click="$emit('remove', idx)">✕</button>
       </div>
     </div>
 
     <!-- Total -->
     <div class="cart-total">
-      <span>Total</span>
-      <strong>{{ formatRupiah(total) }}</strong>
+      <span class="cart-total__label">Total</span>
+      <strong class="cart-total__value">{{ formatRupiah(total) }}</strong>
     </div>
   </div>
 </template>
 
 <style scoped>
 .cart { display: flex; flex-direction: column; gap: 12px; }
-.cart-title { font-size: var(--text-subheading); }
+
+.cart-title {
+  font-size: var(--text-subheading);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--color-secondary);
+}
 
 .cart-empty {
-  text-align: center;
-  padding: 32px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 36px 0;
   color: #9CA3AF;
-  font-style: italic;
   font-size: var(--text-body);
+  text-align: center;
 }
+
+.cart-empty__icon { font-size: 32px; }
 
 .cart-items { display: flex; flex-direction: column; gap: 8px; }
 
@@ -80,13 +92,17 @@ defineEmits(['remove'])
   align-items: flex-start;
   justify-content: space-between;
   gap: 10px;
-  padding: 10px 12px;
+  padding: 12px 14px;
   background: #F9FAFB;
-  border-radius: 8px;
-  border: 1px solid #E5E7EB;
+  border-radius: 10px;
+  border: 1px solid #F3F4F6;
+  transition: border-color var(--transition-fast);
 }
 
-.cart-item--modified { border-left: 3px solid var(--color-warning); }
+.cart-item--modified {
+  border-left: 3px solid var(--color-warning);
+  background: rgba(245, 158, 11, 0.04);
+}
 
 .cart-item__main { flex: 1; min-width: 0; }
 
@@ -94,34 +110,51 @@ defineEmits(['remove'])
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
   flex-wrap: wrap;
 }
 
-.cart-item__name { font-weight: 600; font-size: var(--text-body); }
-
+.cart-item__name  { font-weight: 600; font-size: var(--text-body); color: var(--color-secondary); }
 .cart-item__detail { font-size: var(--text-body); color: #374151; }
-
-.price-strike { color: #9CA3AF; font-size: var(--text-label); text-decoration: line-through; }
-
-.cart-item__note { font-size: var(--text-label); color: #6B7280; margin-top: 3px; }
+.price-strike      { color: #9CA3AF; font-size: var(--text-label); text-decoration: line-through; }
+.cart-item__note   { font-size: var(--text-label); color: #6B7280; margin-top: 4px; }
 
 .btn-remove {
-  padding: 3px 7px !important;
-  font-size: 12px !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  background: rgba(220, 38, 38, 0.1);
+  border: none;
+  cursor: pointer;
+  color: var(--color-danger);
+  font-size: 12px;
   flex-shrink: 0;
   align-self: flex-start;
+  transition: background var(--transition-fast);
 }
+.btn-remove:hover { background: rgba(220, 38, 38, 0.2); }
 
 .cart-total {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 0 0;
+  padding: 14px 0 2px;
   border-top: 2px solid #E5E7EB;
-  font-size: var(--text-subheading);
-  font-family: var(--font-heading);
 }
 
-:deep(.badge-info) { background-color: #DBEAFE; color: #1D4ED8; }
+.cart-total__label {
+  font-size: var(--text-body);
+  color: #6B7280;
+  font-weight: 500;
+}
+
+.cart-total__value {
+  font-family: var(--font-heading);
+  font-size: var(--text-subheading);
+  font-weight: 700;
+  color: var(--color-secondary);
+}
 </style>

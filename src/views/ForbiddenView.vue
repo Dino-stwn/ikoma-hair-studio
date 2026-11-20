@@ -16,7 +16,7 @@ const router = useRouter()
       <div class="forbidden-actions">
         <BaseButton
           label="← Kembali"
-          variant="secondary"
+          variant="ghost"
           @click="router.go(-1)"
         />
         <BaseButton
@@ -43,7 +43,7 @@ const router = useRouter()
   text-align: center;
   max-width: 420px;
   width: 100%;
-  padding: 48px 40px;
+  padding: 56px 44px;
 }
 
 .forbidden-code {
@@ -53,13 +53,14 @@ const router = useRouter()
   color: var(--color-danger);
   line-height: 1;
   margin-bottom: 16px;
+  opacity: 0.85;
 }
 
 .forbidden-desc {
   color: #6B7280;
   margin-top: 10px;
-  margin-bottom: 28px;
-  line-height: 1.6;
+  margin-bottom: 32px;
+  line-height: 1.65;
 }
 
 .forbidden-actions {

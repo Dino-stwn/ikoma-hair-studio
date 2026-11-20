@@ -44,7 +44,7 @@ function handleSubmit() {
     @close="$emit('close')"
   >
     <p class="restock-info">
-      Stok sekarang: <strong>{{ product?.stock ?? 0 }}</strong>
+      <span>Stok sekarang:</span><strong>{{ product?.stock ?? 0 }}</strong>
     </p>
 
     <form id="restock-form" novalidate @submit.prevent="handleSubmit">
@@ -71,8 +71,22 @@ function handleSubmit() {
 
 <style scoped>
 .restock-info {
-  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  background: #F9FAFB;
+  border: 1px solid #F3F4F6;
+  border-radius: 10px;
   font-size: var(--text-body);
-  color: #6B7280;
+  color: #374151;
+}
+.restock-info strong {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-secondary);
+  margin-left: 4px;
 }
 </style>

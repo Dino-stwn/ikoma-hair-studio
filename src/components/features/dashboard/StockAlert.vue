@@ -20,7 +20,7 @@ const alertProducts = computed(() =>
   <div v-if="alertProducts.length" class="stock-alert">
     <div class="alert-header">
       <span class="alert-icon">⚠️</span>
-      <strong>Peringatan Stok</strong>
+      <strong class="alert-title">Peringatan Stok</strong>
       <span class="alert-count">{{ alertProducts.length }} produk perlu perhatian</span>
     </div>
     <ul class="alert-list">
@@ -35,20 +35,37 @@ const alertProducts = computed(() =>
 
 <style scoped>
 .stock-alert {
-  background: #FFF7ED;
-  border: 1px solid #FED7AA;
-  border-left: 4px solid var(--color-warning, #F59E0B);
-  border-radius: 8px;
-  padding: 14px 18px;
+  background: rgba(245, 158, 11, 0.07);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  border-left: 4px solid var(--color-warning);
+  border-radius: var(--radius-card);
+  padding: 16px 20px;
+  margin-bottom: 20px;
 }
+
 .alert-header {
-  display: flex; align-items: center; gap: 8px;
-  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
 }
+
 .alert-icon   { font-size: 16px; }
-.alert-count  { margin-left: auto; font-size: 12px; color: #92400E; }
-.alert-list   { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; }
-.alert-item   { display: flex; align-items: center; gap: 10px; font-size: 13px; }
-.product-name { font-weight: 600; color: #1F2937; flex: 1; }
-.product-stock{ color: #6B7280; white-space: nowrap; }
+.alert-title  { font-size: var(--text-body); color: #92400E; }
+.alert-count  { margin-left: auto; font-size: var(--text-label); color: #92400E; opacity: 0.8; }
+
+.alert-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+
+.alert-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--text-body);
+  padding: 8px 10px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+}
+
+.product-name  { font-weight: 600; color: var(--color-secondary); flex: 1; }
+.product-stock { color: #6B7280; white-space: nowrap; font-size: var(--text-label); }
 </style>

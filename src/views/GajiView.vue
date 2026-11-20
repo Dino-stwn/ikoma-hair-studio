@@ -45,6 +45,6 @@ const sortedPayrolls = computed(() =>
 </template>
 
 <style scoped>
-.page-header { margin-bottom: 16px; }
-.page-sub    { color: #6B7280; margin-top: 4px; font-size: var(--text-body); }
+.page-header { margin-bottom: 20px; }
+.page-sub    { color: #6B7280; margin-top: 6px; font-size: var(--text-body); }
 </style>

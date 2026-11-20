@@ -49,11 +49,14 @@ function reset() {
 </template>
 
 <style scoped>
-.filter-bar  { margin-bottom: 16px; }
+.filter-bar  { margin-bottom: 20px; }
+
 .filter-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-  gap: 12px; margin-bottom: 12px;
+  gap: 14px;
+  margin-bottom: 14px;
 }
+
 .filter-actions { display: flex; justify-content: flex-end; }
 </style>

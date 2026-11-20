@@ -65,9 +65,13 @@ function onRestockConfirm(delta) {
 
 <style scoped>
 .page-header {
-  display: flex; align-items: flex-start; justify-content: space-between;
-  gap: 16px; margin-bottom: 16px; flex-wrap: wrap;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
 }
-.page-sub { color: #6B7280; margin-top: 4px; font-size: var(--text-body); }
-.mt-card  { margin-top: 4px; }
+.page-sub { color: #6B7280; margin-top: 6px; font-size: var(--text-body); }
+.mt-card  { margin-top: 0; }
 </style>

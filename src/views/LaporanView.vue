@@ -91,12 +91,16 @@ const hasWeek = computed(() => !!weekStart.value)
 
 .page-header { margin-bottom: 0; }
 .header-top  { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap; }
-.page-sub    { color: #6B7280; margin-top: 4px; font-size: var(--text-body); }
+.page-sub    { color: #6B7280; margin-top: 6px; font-size: var(--text-body); }
 
 .empty-week {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
   text-align: center;
   color: #9CA3AF;
-  padding: 40px;
+  padding: 48px 24px;
   font-size: var(--text-body);
 }
 

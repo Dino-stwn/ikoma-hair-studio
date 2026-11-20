@@ -119,5 +119,5 @@ function handleSubmit() {
 </template>
 
 <style scoped>
-.mb-field { margin-bottom: 16px; }
+.mb-field { margin-bottom: 18px; }
 </style>

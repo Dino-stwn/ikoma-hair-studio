@@ -103,11 +103,21 @@ function confirmDelete() {
 </template>
 
 <style scoped>
-.page-header { margin-bottom: 16px; }
+.page-header { margin-bottom: 20px; }
+
 .summary-row {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 14px 0 2px; margin-top: 8px; border-top: 2px solid #E5E7EB;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0 2px;
+  margin-top: 8px;
+  border-top: 2px solid #E5E7EB;
 }
 .summary-label { font-size: var(--text-body); color: #6B7280; }
-.summary-total { font-family: var(--font-heading); font-size: var(--text-subheading); color: var(--color-secondary); }
+.summary-total {
+  font-family: var(--font-heading);
+  font-size: var(--text-subheading);
+  font-weight: 700;
+  color: var(--color-secondary);
+}
 </style>

@@ -102,14 +102,21 @@ const topProduk = computed(() => {
 
 <style scoped>
 .top-items { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-.top-section { background: #fff; border: 1px solid var(--color-border, #E5E7EB); border-radius: 8px; padding: 18px; }
-.section-title { font-size: 14px; font-weight: 600; color: var(--color-secondary); margin-bottom: 12px; }
-.empty-hint { color: #9CA3AF; font-size: 13px; }
+.top-section {
+  background: var(--color-surface);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: var(--radius-card);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+}
+.section-title { font-family: var(--font-heading); font-size: 14px; font-weight: 600; color: var(--color-secondary); margin-bottom: 14px; }
+.empty-hint { color: #9CA3AF; font-size: 13px; padding: 12px 0; }
 .rank-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-.rank-table th { text-align: left; padding: 6px 8px; color: #6B7280; font-weight: 600; border-bottom: 1px solid #F3F4F6; }
-.rank-table td { padding: 7px 8px; border-bottom: 1px solid #F9FAFB; }
+.rank-table th { text-align: left; padding: 8px 8px; color: #6B7280; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.3px; border-bottom: 2px solid #F3F4F6; }
+.rank-table td { padding: 9px 8px; border-bottom: 1px solid #F9FAFB; }
+.rank-table tr:hover td { background-color: rgba(201,162,39,0.03); }
 .rank-table tr:last-child td { border-bottom: none; }
-.rank { font-weight: 700; color: var(--color-primary); width: 24px; }
+.rank { font-weight: 700; color: var(--color-primary); width: 28px; }
 .num { text-align: right; white-space: nowrap; }
 
 @media (max-width: 700px) {

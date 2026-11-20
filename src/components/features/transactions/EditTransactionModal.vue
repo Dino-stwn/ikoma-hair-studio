@@ -63,10 +63,19 @@ function handleSubmit() {
 </template>
 
 <style scoped>
-.trx-info  { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
-.info-row  { display: flex; justify-content: space-between; font-size: var(--text-body); }
-.total-val { font-weight: 700; color: var(--color-secondary); }
-.divider   { border: none; border-top: 1px solid #E5E7EB; margin-bottom: 16px; }
-.mb-f      { margin-bottom: 14px; }
-.textarea  { resize: vertical; min-height: 60px; margin-top: 4px; width: 100%; }
+.trx-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+  background: #F9FAFB;
+  border: 1px solid #F3F4F6;
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.info-row  { display: flex; justify-content: space-between; align-items: center; font-size: var(--text-body); }
+.total-val { font-weight: 700; color: var(--color-secondary); font-family: var(--font-heading); }
+.divider   { border: none; border-top: 1px solid #F3F4F6; margin-bottom: 18px; }
+.mb-f      { margin-bottom: 16px; }
+.textarea  { resize: vertical; min-height: 64px; margin-top: 6px; width: 100%; }
 </style>

@@ -57,18 +57,44 @@ const trxTerbaru = computed(() =>
 <template>
   <MainLayout>
     <div class="page-header">
-      <h1>Dashboard</h1>
-      <p class="page-sub">
-        Selamat datang, <strong>{{ auth.currentUser?.name }}</strong> —
-        <span class="today-label">{{ formatTanggalPendek(today) }}</span>
-      </p>
+      <div>
+        <h1>Dashboard</h1>
+        <p class="page-sub">
+          Selamat datang, <strong>{{ auth.currentUser?.name }}</strong> —
+          <span class="today-label">{{ formatTanggalPendek(today) }}</span>
+        </p>
+      </div>
     </div>
 
     <div class="stats-grid">
-      <StatCard title="Pendapatan Hari Ini"   :value="formatRupiah(pendapatanHariIni)"   :hint="`${jumlahTrxHariIni} transaksi`" />
-      <StatCard title="Pendapatan Minggu Ini" :value="formatRupiah(pendapatanMingguIni)" hint="Senin s.d. hari ini" />
-      <StatCard title="Transaksi Hari Ini"    :value="String(jumlahTrxHariIni)"          hint="transaksi tercatat" />
-      <StatCard title="Produk Perlu Restok"   :value="String(perluRestok.length)"        :hint="perluRestok.length ? 'Stok habis / menipis' : 'Semua stok aman'" />
+      <StatCard
+        title="Pendapatan Hari Ini"
+        :value="formatRupiah(pendapatanHariIni)"
+        :hint="`${jumlahTrxHariIni} transaksi`"
+        icon="💵"
+        variant="success"
+      />
+      <StatCard
+        title="Pendapatan Minggu Ini"
+        :value="formatRupiah(pendapatanMingguIni)"
+        hint="Senin s.d. hari ini"
+        icon="📈"
+        variant="default"
+      />
+      <StatCard
+        title="Transaksi Hari Ini"
+        :value="String(jumlahTrxHariIni)"
+        hint="transaksi tercatat"
+        icon="🧾"
+        variant="default"
+      />
+      <StatCard
+        title="Produk Perlu Restok"
+        :value="String(perluRestok.length)"
+        :hint="perluRestok.length ? 'Stok habis / menipis' : 'Semua stok aman'"
+        icon="📦"
+        :variant="perluRestok.length ? 'danger' : 'success'"
+      />
     </div>
 
     <StockAlert :products="prdStore.products" />
@@ -81,14 +107,21 @@ const trxTerbaru = computed(() =>
 </template>
 
 <style scoped>
-.page-header { margin-bottom: 20px; }
-.page-sub    { color: #6B7280; margin-top: 4px; font-size: var(--text-body); }
+.page-header { margin-bottom: 24px; }
+.page-sub    { color: #6B7280; margin-top: 6px; font-size: var(--text-body); }
 .today-label { color: #9CA3AF; }
 .stats-grid  {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-  gap: 16px; margin-bottom: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
 }
-.section-title { font-size: var(--text-subheading); margin-bottom: 14px; }
-@media (max-width: 600px) { .stats-grid { grid-template-columns: 1fr 1fr; } }
+.section-title { font-size: var(--text-subheading); margin-bottom: 16px; }
+
+@media (max-width: 600px) {
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 360px) {
+  .stats-grid { grid-template-columns: 1fr; }
+}
 </style>

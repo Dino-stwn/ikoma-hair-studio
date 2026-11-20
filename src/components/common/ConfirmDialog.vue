@@ -27,44 +27,46 @@ defineEmits(['confirm', 'cancel'])
 .overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(17, 24, 39, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
   padding: 16px;
+  backdrop-filter: blur(2px);
 }
 
 .dialog {
   background: var(--color-surface);
-  border-radius: 10px;
-  padding: 32px 28px;
+  border-radius: var(--radius-modal);
+  padding: 36px 32px;
   width: 100%;
   max-width: 380px;
   text-align: center;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  box-shadow: var(--shadow-lg);
 }
 
-.dialog__icon { font-size: 36px; margin-bottom: 12px; }
+.dialog__icon { font-size: 40px; margin-bottom: 14px; }
 
 .dialog__message {
   font-size: var(--text-body);
   color: var(--color-text);
-  line-height: 1.6;
-  margin-bottom: 24px;
+  line-height: 1.65;
+  margin-bottom: 28px;
 }
 
 .dialog__actions {
   display: flex;
-  gap: 10px;
+  gap: 12px;
   justify-content: center;
 }
 
-/* Transisi sama seperti BaseModal */
-.modal-enter-active, .modal-leave-active { transition: opacity 0.2s; }
+/* Transisi */
+.modal-enter-active { transition: opacity var(--transition-base); }
+.modal-leave-active { transition: opacity var(--transition-fast); }
 .modal-enter-from, .modal-leave-to { opacity: 0; }
-.modal-enter-active .dialog,
-.modal-leave-active .dialog { transition: transform 0.2s; }
-.modal-enter-from .dialog,
-.modal-leave-to .dialog { transform: scale(0.95); }
+.modal-enter-active .dialog { transition: transform var(--transition-base); }
+.modal-leave-active .dialog { transition: transform var(--transition-fast); }
+.modal-enter-from .dialog { transform: scale(0.95) translateY(-10px); }
+.modal-leave-to .dialog   { transform: scale(0.97); }
 </style>

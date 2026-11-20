@@ -89,12 +89,32 @@ function handleSubmit() {
 </template>
 
 <style scoped>
-.mb-f { margin-bottom: 16px; }
-.err-general { color: var(--color-danger); font-size: var(--text-label); margin-bottom: 10px; }
-.role-info {
-  display: flex; align-items: center; gap: 12px;
-  padding: 10px 12px; background: #F9FAFB;
-  border-radius: 6px; margin-bottom: 16px; border: 1px solid #E5E7EB;
+.mb-f { margin-bottom: 18px; }
+
+.err-general {
+  color: var(--color-danger);
+  font-size: var(--text-label);
+  font-weight: 500;
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  background: var(--color-danger-tint);
+  border-radius: 8px;
 }
-.role-val { font-weight: 600; color: var(--color-secondary); font-size: var(--text-body); }
+
+.role-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  background: var(--color-primary-tint);
+  border: 1px solid rgba(201, 162, 39, 0.2);
+  border-radius: 10px;
+  margin-bottom: 18px;
+}
+
+.role-val {
+  font-weight: 600;
+  color: var(--color-secondary);
+  font-size: var(--text-body);
+}
 </style>
