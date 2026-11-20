@@ -1,0 +1,10 @@
+[
+  { "id": "1", "name": "Hair Cut", "price": 30000, "is_active": true },
+  { "id": "2", "name": "Hair Cut + Hair Wash", "price": 45000, "is_active": true },
+  { "id": "3", "name": "Creambath", "price": 55000, "is_active": true },
+  { "id": "4", "name": "Hair Coloring (Black)", "price": 150000, "is_active": true },
+  { "id": "5", "name": "Hair Coloring (Bleaching)", "price": 200000, "is_active": true },
+  { "id": "6", "name": "Paket I: Hair Cut + Hair Wash + Face Mask", "price": 65000, "is_active": true },
+  { "id": "7", "name": "Paket II: Hair Cut + Hair Wash + Creambath", "price": 100000, "is_active": true },
+  { "id": "8", "name": "Paket III: Hair Cut + Hair Wash + Face Mask + Creambath", "price": 150000, "is_active": true }
+]

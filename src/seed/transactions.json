@@ -1,0 +1,229 @@
+[
+  {
+    "id": "1",
+    "code": "TRX-20261109-001",
+    "user_id": "3",
+    "trx_date": "2026-11-09",
+    "payment_method": "tunai",
+    "total": 30000,
+    "note": "",
+    "items": [
+      {
+        "item_type": "service",
+        "service_id": "1",
+        "product_id": null,
+        "qty": 1,
+        "unit_price": 30000,
+        "subtotal": 30000,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "code": "TRX-20261110-001",
+    "user_id": "4",
+    "trx_date": "2026-11-10",
+    "payment_method": "qris",
+    "total": 45000,
+    "note": "",
+    "items": [
+      {
+        "item_type": "service",
+        "service_id": "2",
+        "product_id": null,
+        "qty": 1,
+        "unit_price": 45000,
+        "subtotal": 45000,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "code": "TRX-20261110-002",
+    "user_id": "2",
+    "trx_date": "2026-11-10",
+    "payment_method": "transfer",
+    "total": 55000,
+    "note": "",
+    "items": [
+      {
+        "item_type": "service",
+        "service_id": "3",
+        "product_id": null,
+        "qty": 1,
+        "unit_price": 55000,
+        "subtotal": 55000,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "code": "TRX-20261111-001",
+    "user_id": "3",
+    "trx_date": "2026-11-11",
+    "payment_method": "tunai",
+    "total": 65000,
+    "note": "",
+    "items": [
+      {
+        "item_type": "service",
+        "service_id": "6",
+        "product_id": null,
+        "qty": 1,
+        "unit_price": 65000,
+        "subtotal": 65000,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "code": "TRX-20261112-001",
+    "user_id": "4",
+    "trx_date": "2026-11-12",
+    "payment_method": "qris",
+    "total": 150000,
+    "note": "",
+    "items": [
+      {
+        "item_type": "service",
+        "service_id": "4",
+        "product_id": null,
+        "qty": 1,
+        "unit_price": 150000,
+        "subtotal": 150000,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "code": "TRX-20261112-002",
+    "user_id": "2",
+    "trx_date": "2026-11-12",
+    "payment_method": "tunai",
+    "total": 25000,
+    "note": "",
+    "items": [
+      {
+        "item_type": "service",
+        "service_id": "1",
+        "product_id": null,
+        "qty": 1,
+        "unit_price": 25000,
+        "subtotal": 25000,
+        "note": "Harga spesial pelanggan tetap"
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "code": "TRX-20261113-001",
+    "user_id": "3",
+    "trx_date": "2026-11-13",
+    "payment_method": "transfer",
+    "total": 100000,
+    "note": "",
+    "items": [
+      {
+        "item_type": "service",
+        "service_id": "7",
+        "product_id": null,
+        "qty": 1,
+        "unit_price": 100000,
+        "subtotal": 100000,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "code": "TRX-20261114-001",
+    "user_id": "4",
+    "trx_date": "2026-11-14",
+    "payment_method": "qris",
+    "total": 195000,
+    "note": "",
+    "items": [
+      {
+        "item_type": "service",
+        "service_id": "2",
+        "product_id": null,
+        "qty": 1,
+        "unit_price": 45000,
+        "subtotal": 45000,
+        "note": ""
+      },
+      {
+        "item_type": "service",
+        "service_id": "3",
+        "product_id": null,
+        "qty": 1,
+        "unit_price": 55000,
+        "subtotal": 55000,
+        "note": ""
+      },
+      {
+        "item_type": "service",
+        "service_id": "5",
+        "product_id": null,
+        "qty": 1,
+        "unit_price": 95000,
+        "subtotal": 95000,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "code": "TRX-20261115-001",
+    "user_id": "2",
+    "trx_date": "2026-11-15",
+    "payment_method": "tunai",
+    "total": 150000,
+    "note": "Pelanggan group 3 orang",
+    "items": [
+      {
+        "item_type": "service",
+        "service_id": "1",
+        "product_id": null,
+        "qty": 3,
+        "unit_price": 30000,
+        "subtotal": 90000,
+        "note": ""
+      },
+      {
+        "item_type": "service",
+        "service_id": "3",
+        "product_id": null,
+        "qty": 1,
+        "unit_price": 60000,
+        "subtotal": 60000,
+        "note": ""
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "code": "TRX-20261116-001",
+    "user_id": "3",
+    "trx_date": "2026-11-16",
+    "payment_method": "transfer",
+    "total": 150000,
+    "note": "",
+    "items": [
+      {
+        "item_type": "service",
+        "service_id": "8",
+        "product_id": null,
+        "qty": 1,
+        "unit_price": 150000,
+        "subtotal": 150000,
+        "note": ""
+      }
+    ]
+  }
+]

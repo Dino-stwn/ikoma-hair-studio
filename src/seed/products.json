@@ -1,0 +1,4 @@
+[
+  { "id": "1", "name": "Minyak Rambut Gel", "type": "gel",    "price": 30000, "stock": 0, "min_stock": 3 },
+  { "id": "2", "name": "Hair Powder",       "type": "powder", "price": 35000, "stock": 0, "min_stock": 3 }
+]

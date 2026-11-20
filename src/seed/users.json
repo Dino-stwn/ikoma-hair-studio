@@ -1,0 +1,6 @@
+[
+  { "id": "1", "name": "Owner Utama",  "username": "owner.utama",  "password": "demo123", "role": "owner_utama",  "is_active": true },
+  { "id": "2", "name": "Owner Cabang", "username": "owner.cabang", "password": "demo123", "role": "owner_cabang", "is_active": true },
+  { "id": "3", "name": "Karyawan 1",   "username": "karyawan1",    "password": "demo123", "role": "karyawan",     "is_active": true },
+  { "id": "4", "name": "Karyawan 2",   "username": "karyawan2",    "password": "demo123", "role": "karyawan",     "is_active": true }
+]
