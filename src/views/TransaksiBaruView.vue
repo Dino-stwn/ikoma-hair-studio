@@ -78,7 +78,7 @@ function handleSubmit() {
             <span class="total-banner__value">{{ formatRupiah(cartTotal) }}</span>
           </div>
 
-          <BaseButton label="💾 Simpan Transaksi" variant="primary" class="btn-full" @click="handleSubmit" />
+          <BaseButton label="Simpan Transaksi" variant="primary" class="btn-full" @click="handleSubmit" />
         </div>
       </div>
     </div>

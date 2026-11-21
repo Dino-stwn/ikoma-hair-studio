@@ -52,7 +52,7 @@ defineExpose({ reset })
       :error="deductionErr"
       class="deduction-input"
     />
-    <BaseButton label="💾 Simpan Rekap" variant="primary" class="save-btn" @click="handleSave" />
+    <BaseButton label="Simpan Rekap" variant="primary" class="save-btn" @click="handleSave" />
   </div>
 </template>
 

@@ -71,28 +71,24 @@ const trxTerbaru = computed(() =>
         title="Pendapatan Hari Ini"
         :value="formatRupiah(pendapatanHariIni)"
         :hint="`${jumlahTrxHariIni} transaksi`"
-        icon="💵"
         variant="success"
       />
       <StatCard
         title="Pendapatan Minggu Ini"
         :value="formatRupiah(pendapatanMingguIni)"
         hint="Senin s.d. hari ini"
-        icon="📈"
         variant="default"
       />
       <StatCard
         title="Transaksi Hari Ini"
         :value="String(jumlahTrxHariIni)"
         hint="transaksi tercatat"
-        icon="🧾"
         variant="default"
       />
       <StatCard
         title="Produk Perlu Restok"
         :value="String(perluRestok.length)"
         :hint="perluRestok.length ? 'Stok habis / menipis' : 'Semua stok aman'"
-        icon="📦"
         :variant="perluRestok.length ? 'danger' : 'success'"
       />
     </div>

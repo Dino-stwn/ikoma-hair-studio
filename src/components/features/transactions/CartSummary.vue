@@ -46,7 +46,7 @@ defineEmits(['remove'])
           </p>
 
           <!-- Catatan -->
-          <p v-if="item.note" class="cart-item__note">📝 {{ item.note }}</p>
+          <p v-if="item.note" class="cart-item__note">{{ item.note }}</p>
         </div>
 
         <!-- Tombol hapus -->

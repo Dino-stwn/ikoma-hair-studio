@@ -27,7 +27,6 @@ function empCount(payroll) {
     <h2 class="section-title">Riwayat Rekap Gaji</h2>
 
     <div v-if="rows.length === 0" class="empty-state">
-      <span class="empty-icon">💰</span>
       <span>Belum ada rekap gaji yang disimpan.</span>
     </div>
 

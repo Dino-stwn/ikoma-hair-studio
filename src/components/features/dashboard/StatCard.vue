@@ -3,7 +3,6 @@ defineProps({
   title:   { type: String, default: '' },
   value:   { type: [String, Number], default: '' },
   hint:    { type: String, default: '' },
-  icon:    { type: String, default: '📊' },
   variant: { type: String, default: 'default' } // default | success | warning | danger
 })
 </script>
@@ -11,11 +10,8 @@ defineProps({
 <template>
   <div class="stat-card card">
     <div class="stat-card__header">
-      <span class="stat-card__icon-wrap" :class="`icon-wrap--${variant}`">
-        {{ icon }}
-      </span>
+      <p class="stat-card__title">{{ title }}</p>
     </div>
-    <p class="stat-card__title">{{ title }}</p>
     <p class="stat-card__value">{{ value }}</p>
     <p v-if="hint" class="stat-card__hint">{{ hint }}</p>
   </div>

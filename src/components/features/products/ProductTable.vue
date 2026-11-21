@@ -47,7 +47,7 @@ const typeLabel = { gel: 'Gel', powder: 'Powder' }
           </td>
           <td class="text-center col-actions" data-label="Aksi">
             <div class="action-btns">
-              <BaseButton label="✏️ Ubah" variant="secondary" class="btn-sm" @click="$emit('edit', row)" />
+              <BaseButton label="Ubah" variant="secondary" class="btn-sm" @click="$emit('edit', row)" />
               <BaseButton label="+ Stok" variant="success" class="btn-sm" @click="$emit('restock', row)" />
             </div>
           </td>

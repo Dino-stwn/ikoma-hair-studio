@@ -68,15 +68,6 @@ async function handleSubmit() {
         {{ loading ? 'Memproses…' : 'Masuk' }}
       </BaseButton>
     </form>
-
-    <details class="demo-info">
-      <summary>Akun demo</summary>
-      <ul>
-        <li><code>owner.utama</code> / <code>demo123</code> — Pemilik Utama</li>
-        <li><code>owner.cabang</code> / <code>demo123</code> — Kepala Cabang</li>
-        <li><code>karyawan1</code> / <code>demo123</code> — Karyawan</li>
-      </ul>
-    </details>
   </div>
 </template>
 

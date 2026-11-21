@@ -99,7 +99,6 @@ function handleSave(deduction) {
   </div>
 
   <div v-else class="calc-empty card">
-    <span style="font-size:28px">📅</span>
     <span>Pilih periode minggu terlebih dahulu untuk melihat kalkulasi.</span>
   </div>
 </template>
