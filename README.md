@@ -29,8 +29,8 @@ npm run build
 
 | Role | Username | Password | Hak Akses |
 |---|---|---|---|
-| **Pemilik Utama** | `owner.utama` | `demo123` | Dashboard, Riwayat, Gaji, Laporan |
-| **Kepala Cabang** | `owner.cabang` | `demo123` | Semua fitur + kelola data |
+| **Owner Utama** | `owner.utama` | `demo123` | Dashboard, Riwayat, Gaji, Laporan |
+| **Owner Cabang** | `owner.cabang` | `demo123` | Semua fitur + kelola data |
 | **Karyawan** | `karyawan1` | `demo123` | Dashboard, Catat Transaksi, Riwayat, Gaji |
 | **Karyawan 2** | `karyawan2` | `demo123` | Sama dengan karyawan1 |
 
@@ -43,13 +43,13 @@ npm run build
 | Fitur | Role |
 |---|---|
 | Dashboard (StatCard, StockAlert, 5 transaksi terbaru) | Semua |
-| Catat Transaksi Baru | Kepala Cabang, Karyawan |
-| Riwayat Transaksi (filter, ubah, hapus + kembalikan stok) | Semua (ubah/hapus: Kepala Cabang) |
-| Kelola Layanan (tambah, ubah, nonaktifkan) | Kepala Cabang |
-| Kelola Produk + Tambah Stok Cepat | Kepala Cabang |
-| Kelola Karyawan (tambah, aktifkan/nonaktifkan) | Kepala Cabang |
-| Rekap Gaji Mingguan (otomatis bagi rata + sisa) | Semua lihat; Kepala Cabang simpan |
-| Laporan Mingguan + Export CSV | Pemilik Utama, Kepala Cabang |
+| Catat Transaksi Baru | Owner Cabang, Karyawan |
+| Riwayat Transaksi (filter, ubah, hapus + kembalikan stok) | Semua (ubah/hapus: Owner Cabang) |
+| Kelola Layanan (tambah, ubah, nonaktifkan) | Owner Cabang |
+| Kelola Produk + Tambah Stok Cepat | Owner Cabang |
+| Kelola Karyawan (tambah, aktifkan/nonaktifkan) | Owner Cabang |
+| Rekap Gaji Mingguan (otomatis bagi rata + sisa) | Semua lihat; Owner Cabang simpan |
+| Laporan Mingguan + Export CSV | Owner Utama, Owner Cabang |
 
 ---
 
