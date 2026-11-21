@@ -34,7 +34,6 @@ npm run build
 | **Karyawan** | `karyawan1` | `demo123` | Dashboard, Catat Transaksi, Riwayat, Gaji |
 | **Karyawan 2** | `karyawan2` | `demo123` | Sama dengan karyawan1 |
 
-> **Catatan:** Menghapus `localStorage` di DevTools lalu reload akan memuat ulang data awal dari file seed secara otomatis.
 
 ---
 
